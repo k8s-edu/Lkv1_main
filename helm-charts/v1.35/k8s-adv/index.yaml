@@ -1,0 +1,70 @@
+apiVersion: v1
+entries:
+  csi-driver-nfs:
+  - apiVersion: v1
+    appVersion: 4.12.1
+    created: "2026-02-20T09:25:32.954909+09:00"
+    description: CSI NFS Driver for Kubernetes
+    digest: 5fb67735e620b87875c86b389a96726607cdf5b684313a2985ace904e89ba1a2
+    name: csi-driver-nfs
+    urls:
+    - https://k8s-edu.github.io/Lkv1_main/helm-charts/v1.35/k8s-adv/csi-driver-nfs-4.12.1.tgz
+    version: 4.12.1
+  kwok:
+  - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2026-02-20T09:25:32.955136+09:00"
+    description: A Helm chart for kwok cluster
+    digest: d743aa70044a78f47e1fef1d8d5cf2858ecd1caba754f310f58cbfce7b6eac2e
+    name: kwok
+    type: application
+    urls:
+    - https://k8s-edu.github.io/Lkv1_main/helm-charts/v1.35/k8s-adv/kwok-0.1.0.tgz
+    version: 0.1.0
+  metallb:
+  - apiVersion: v2
+    appVersion: v0.15.3
+    created: "2026-02-20T09:25:32.958431+09:00"
+    dependencies:
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 0.15.3
+    - condition: frrk8s.enabled
+      name: frr-k8s
+      repository: https://metallb.github.io/frr-k8s
+      version: 0.0.21
+    description: A network load-balancer implementation for Kubernetes using standard
+      routing protocols
+    digest: 78c3c993010fa0de603f80b31541661359b3eb2cb652d2ef20070dd302bed224
+    home: https://metallb.universe.tf
+    icon: https://metallb.universe.tf/images/logo/metallb-white.png
+    kubeVersion: '>= 1.19.0-0'
+    name: metallb
+    sources:
+    - https://github.com/metallb/metallb
+    type: application
+    urls:
+    - https://k8s-edu.github.io/Lkv1_main/helm-charts/v1.35/k8s-adv/metallb-0.15.3.tgz
+    version: 0.15.3
+  nfs-subdir-external-provisioner:
+  - apiVersion: v1
+    appVersion: 4.0.2
+    created: "2026-02-20T09:25:32.959106+09:00"
+    description: nfs-subdir-external-provisioner is an automatic provisioner that
+      used your *already configured* NFS server, automatically creating Persistent
+      Volumes.
+    digest: afe7e0967cf0c113de3f9cff641faf1630a4a382018a11d6714642abd8abb1d6
+    home: https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner
+    keywords:
+    - nfs
+    - storage
+    - provisioner
+    kubeVersion: '>=1.9.0-0'
+    name: nfs-subdir-external-provisioner
+    sources:
+    - https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner
+    urls:
+    - https://k8s-edu.github.io/Lkv1_main/helm-charts/v1.35/k8s-adv/nfs-subdir-external-provisioner-4.0.12.tgz
+    version: 4.0.12
+generated: "2026-02-20T09:25:32.954134+09:00"
