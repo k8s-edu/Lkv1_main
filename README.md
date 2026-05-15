@@ -25,8 +25,8 @@ helm repo update
 |---|---|---|---|---|
 | v1.30 | Jenkins | 2.440.3 | 5.1.12 | `helm-charts/v1.30/cicd/` |
 | v1.30 | Argo CD | v2.11.0 | 6.9.0 | `helm-charts/v1.30/cicd/` |
-| **v1.35** | **Jenkins** | **2.440.3** | **5.1.12** | **`helm-charts/v1.35/cicd/`** |
-| **v1.35** | **Argo CD** | **v2.11.0** | **6.9.0** | **`helm-charts/v1.35/cicd/`** |
+| **v1.35** | **Jenkins** | **2.541.3** | **5.2.0** | **`helm-charts/v1.35/cicd/`** |
+| **v1.35** | **Argo CD** | **v3.4.2** | **9.5.14** | **`helm-charts/v1.35/cicd/`** |
 
 ---
 
