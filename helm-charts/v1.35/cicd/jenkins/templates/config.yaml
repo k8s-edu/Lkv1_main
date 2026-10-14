@@ -47,7 +47,10 @@ data:
     fi
     echo "copy plugins to shared volume"
     # Copy plugins to shared volume
-    yes n | cp -i {{ .Values.controller.jenkinsRef }}/plugins/* /var/jenkins_plugins/;
+    # cp -i가 건너뛴 파일이 있으면 coreutils 9.2부터 종료 코드 1을 돌려 set -e에서 init이 멈춘다.
+    # /var/jenkins_plugins는 emptyDir이라 노드 재부팅처럼 Pod를 그대로 다시 띄우면 이전 파일이 남아 있다.
+    # 덮어써서 항상 0으로 끝나게 한다(upstream jenkinsci/helm-charts PR #1764와 같은 수정).
+    cp -f {{ .Values.controller.jenkinsRef }}/plugins/* /var/jenkins_plugins/;
 {{- end }}
   {{- if not .Values.controller.sidecars.configAutoReload.enabled }}
     echo "copy configuration as code files"

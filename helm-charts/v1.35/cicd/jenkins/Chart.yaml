@@ -1,8 +1,7 @@
 annotations:
   artifacthub.io/category: integration-delivery
   artifacthub.io/changes: |
-    - Update `jenkins` to version `2.541.3-lts-jdk17`
-    - Update `inbound-agent` to version `3355.v388858a_47b_33-20-jdk17`
+    - Copy plugins with `cp -f` so that init does not fail after an in-place pod restart (node reboot)
   artifacthub.io/images: |
     - name: jenkins
       image: docker.io/jenkins/jenkins:2.541.3-lts-jdk17
@@ -47,4 +46,4 @@ sources:
 - https://github.com/maorfr/kube-tasks
 - https://github.com/jenkinsci/configuration-as-code-plugin
 type: application
-version: 5.2.0
+version: 5.2.1

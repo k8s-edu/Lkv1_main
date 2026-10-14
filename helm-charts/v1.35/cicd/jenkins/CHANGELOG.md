@@ -12,6 +12,11 @@ Use the following links to reference issues, PRs, and commits prior to v2.6.0.
 The changelog until v1.5.7 was auto-generated based on git commits.
 Those entries include a reference to the git commit to be able to get more details.
 
+
+## 5.2.1
+
+Copy plugins to the shared volume with `cp -f` instead of `yes n | cp -i`. With coreutils 9.2 or later `cp -i` exits 1 when it skips a file, and `/var/jenkins_plugins` is an `emptyDir` that keeps its files on an in-place pod restart such as a node reboot, so the init container failed until the pod was deleted. Same change as upstream jenkinsci/helm-charts PR #1764.
+
 ## 5.1.12
 
 Update `git` to version `5.2.2`
