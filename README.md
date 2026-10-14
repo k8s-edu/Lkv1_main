@@ -25,7 +25,7 @@ helm repo update
 |---|---|---|---|---|
 | v1.30 | Jenkins | 2.440.3 | 5.1.12 | `helm-charts/v1.30/cicd/` |
 | v1.30 | Argo CD | v2.11.0 | 6.9.0 | `helm-charts/v1.30/cicd/` |
-| **v1.35** | **Jenkins** | **2.541.3** | **5.2.0** | **`helm-charts/v1.35/cicd/`** |
+| **v1.35** | **Jenkins** | **2.541.3** | **5.2.1** | **`helm-charts/v1.35/cicd/`** |
 | **v1.35** | **Argo CD** | **v3.4.2** | **9.5.14** | **`helm-charts/v1.35/cicd/`** |
 
 ---
@@ -52,7 +52,10 @@ gh-pages 브랜치 (GitHub Pages 서빙)
     │   └── index.yaml
     └── v1.35/cicd/
         ├── jenkins-5.1.12.tgz
+        ├── jenkins-5.2.0.tgz
+        ├── jenkins-5.2.1.tgz
         ├── argo-cd-6.9.0.tgz
+        ├── argo-cd-9.5.14.tgz
         └── index.yaml
 ```
 
