@@ -10,7 +10,7 @@ entries:
         url: https://argoproj.github.io/argo-helm/pgp_keys.asc
     apiVersion: v2
     appVersion: v3.4.2
-    created: "2026-05-15T10:08:52.830567+09:00"
+    created: "2026-10-14T20:28:50.057265+09:00"
     dependencies:
     - condition: redis-ha.enabled
       name: redis-ha
@@ -45,7 +45,7 @@ entries:
         url: https://argoproj.github.io/argo-helm/pgp_keys.asc
     apiVersion: v2
     appVersion: v2.11.0
-    created: "2026-05-15T10:08:52.825215+09:00"
+    created: "2026-10-14T20:28:50.048702+09:00"
     dependencies:
     - condition: redis-ha.enabled
       name: redis-ha
@@ -75,6 +75,59 @@ entries:
   - annotations:
       artifacthub.io/category: integration-delivery
       artifacthub.io/changes: |
+        - Copy plugins with `cp -f` so that init does not fail after an in-place pod restart (node reboot)
+      artifacthub.io/images: |
+        - name: jenkins
+          image: docker.io/jenkins/jenkins:2.541.3-lts-jdk17
+        - name: k8s-sidecar
+          image: docker.io/kiwigrid/k8s-sidecar:1.26.2
+        - name: inbound-agent
+          image: jenkins/inbound-agent:3355.v388858a_47b_33-20-jdk17
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins
+        - name: Jenkins
+          url: https://www.jenkins.io/
+        - name: support
+          url: https://github.com/jenkinsci/helm-charts/issues
+    apiVersion: v2
+    appVersion: 2.541.3
+    created: "2026-10-14T20:28:50.06459+09:00"
+    description: 'Jenkins - Build great things at any scale! As the leading open source
+      automation server, Jenkins provides over 1800 plugins to support building, deploying
+      and automating any project. '
+    digest: d915aa5a442401f6cb4429ced22ea0973278b567774788278531a70a9661e712
+    home: https://www.jenkins.io/
+    icon: https://get.jenkins.io/art/jenkins-logo/logo.svg
+    keywords:
+    - jenkins
+    - ci
+    - devops
+    maintainers:
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: garridomota@gmail.com
+      name: mogaal
+    - email: wmcdona89@gmail.com
+      name: wmcdona89
+    - email: timjacomb1@gmail.com
+      name: timja
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-inbound-agent
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+    type: application
+    urls:
+    - https://k8s-edu.github.io/Lkv1_main/helm-charts/v1.35/cicd/jenkins-5.2.1.tgz
+    version: 5.2.1
+  - annotations:
+      artifacthub.io/category: integration-delivery
+      artifacthub.io/changes: |
         - Update `jenkins` to version `2.541.3-lts-jdk17`
         - Update `inbound-agent` to version `3355.v388858a_47b_33-20-jdk17`
       artifacthub.io/images: |
@@ -94,7 +147,7 @@ entries:
           url: https://github.com/jenkinsci/helm-charts/issues
     apiVersion: v2
     appVersion: 2.541.3
-    created: "2026-05-15T10:08:52.834332+09:00"
+    created: "2026-10-14T20:28:50.061854+09:00"
     description: 'Jenkins - Build great things at any scale! As the leading open source
       automation server, Jenkins provides over 1800 plugins to support building, deploying
       and automating any project. '
@@ -147,7 +200,7 @@ entries:
           url: https://github.com/jenkinsci/helm-charts/issues
     apiVersion: v2
     appVersion: 2.440.3
-    created: "2026-05-15T10:08:52.832378+09:00"
+    created: "2026-10-14T20:28:50.059637+09:00"
     description: 'Jenkins - Build great things at any scale! As the leading open source
       automation server, Jenkins provides over 1800 plugins to support building, deploying
       and automating any project. '
@@ -179,4 +232,4 @@ entries:
     urls:
     - https://k8s-edu.github.io/Lkv1_main/helm-charts/v1.35/cicd/jenkins-5.1.12.tgz
     version: 5.1.12
-generated: "2026-05-15T10:08:52.818408+09:00"
+generated: "2026-10-14T20:28:50.035814+09:00"
